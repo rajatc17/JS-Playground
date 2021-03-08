@@ -58,6 +58,7 @@ const team = {
     }
 }
 team.addPlayer('Cristiano','Ronaldo',36)
+team.addPlayer('Erling','Haaland',36)
 team.addGame('Ajax',100,90)
 console.log(team.players)
 console.log(team.games)
