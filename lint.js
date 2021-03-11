@@ -5,7 +5,28 @@ let overusedWords = ['really', 'very', 'basically'];
 let unnecessaryWords = ['extremely', 'literally', 'actually' ];
 
 let storyWords = story.split(' ')
-console.log(storyWords)
+//storyWords.forEach(str=>console.log(str))
+let betterWords = storyWords.filter(str=> !unnecessaryWords.includes(str))
+//betterWords.forEach(str=>console.log(str))
 
-let betterWords = storyWords.filter(str => !unnecessaryWords.includes(str))
-betterWords.forEach(str=>console.log(str))
+let oc = {
+    really: 0,
+    very: 0,
+    basically:0
+}
+
+storyWords.forEach(str=>{
+    if(overusedWords.includes(str)){
+        oc[str]++
+    }
+})
+//console.log(oc)
+let sc = 0
+storyWords.forEach(ch=>{
+    if(ch.endsWith('!') || ch.endsWith('.')){
+        sc++
+    }
+})
+console.log(`Word Count = ${storyWords.length}\nSentence Count = ${sc}`)
+console.log(betterWords.join(' '))
+String.tou
