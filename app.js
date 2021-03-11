@@ -37,7 +37,8 @@ const menu = {
             return
         }
         else if(courseName==='appetizers'||courseName==='mains'||courseName==='desserts'){
-            this._courses[courseName].push({name: dishName,price:dishPrice})
+            this._courses[courseName] = {name: dishName,price:dishPrice}
+            console.log(this._courses[courseName])
         }
         else{
             console.log(`${courseName} IS INVALID!`)
