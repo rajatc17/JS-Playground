@@ -55,7 +55,7 @@ const createSurvivingSpecimens = num =>{
     if(i===num){
       break
     }
-    delete creation
+    delete creation // I KNOW JS DOES NOT HAVE MEMORY MANAGEMENT FUNCTIONS(auto garbage collection)
   }
 
   return survivable
